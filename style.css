@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe", Arial, Sans-serif;
+}
+
+body {
+    background-color: #fff0f5;
+    text-align: center;
+    padding: 50px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    background-color: #ff69b4;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+h1 {
+    color: #ff1493;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+.message-container button {
+    margin: auto;
+    background-color: #ff1493;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.her-photo {
+    width: 200px;
+    height: auto;
+    border: 3px solid #ff1493;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px #ff69b4;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+
+
+
+
+
+
+@keyframes shake {
+    0% { transform: translateX(0);}
+    20% { transform: translateX(-10px);}
+    40% { transform: translateX(10px);}
+    60% { transform: translateX(-10px);}
+    80% { transform: translateX(10px);}
+    100% { transform: translateX(0);}
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1);}
+    50% { transform: scale(1.1);}
+    100% { transform: scale(1);}
+}
+
+button:hover {
+    animation: pulse 0.6s infinite;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9);}
+    100% { opacity: 1; transform: scale(1);}
+}
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0.7;
+}

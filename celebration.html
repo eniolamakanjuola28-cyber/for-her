@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="starConfetti()">
+
+<h1>🎂 Happy Birthday Aanu!</h1>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<div class="message-container">
+    <p>May today be fruitful for you. It is well with you, spirit, soul and body. I pray that the Lord Almighty will cause His face to shine upon you. May you not lac anything good in life. May this year be your best year yet. The meaning of "Aanuoluwapo" is "The mercies of the Lord is very much or plenty". Therefore, from henceforth, beginning from today, begin to receive mercy, both from God and from men and women, whether old or young. Wherever you turn to, you'll see the mercy of God there. From the north, to the south, to the east and to the west. May favor find and locate you in the name of Jesus. No weapon formed against you will prosper. The lord will make your crooked ways straight. May you operate in the frequency of the Holy Ghost in this new year. Happy birthday once again my darling friend. Keep shining, for the world is waiting for you to shine your light upon them. I'm rooting for you🤘🤘. Enjoy your day to the fullest my dear.</p>
+</div>
+
+<script src="script.js"></script>
+<script>
+    // Balloon animation
+    function createBalloon() {
+        const colors = ["#ff69b4", "#ff1493", "#ffb6c1", "#ff8c00", "#ffd700"];
+        const balloon = document.createElement("div");
+        balloon.textContent = "🎈";
+        balloon.style.position = "fixed";
+        balloon.style.left = Math.random() * window.innerWidth + "px";
+        balloon.style.top = window.innerHeight + "px"
+        balloon.style.fontSize = Math.random() * 40 + 20 + "px"
+        balloon.style.opacity = Math.random();
+        document.body.appendChild(balloon);
+
+        let top = window.innerHeight;
+        const floatUp = setInterval (() => {
+            top -= 2 + Math.random() * 2;
+            balloon.style.top = top + "px"
+            if(top < -50) {
+                balloon.remove();
+                clearInterval(floatUp);
+            }
+        }, 30);
+    }
+
+    setInterval(createBalloon, 500);
+</script>
+
+</body>
+</html>

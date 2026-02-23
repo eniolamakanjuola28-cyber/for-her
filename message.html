@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Special Message</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<body onload="startHearts()">
+<h1>Hey Aanuoluwa💖</h1>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<div class="message-container">
+    <p>How are you doing today?? I know you weren't expecting this. When I sent you this link, u might be thinking, "why would bro send me a link?? It's my birthday for crying out loud🤣🤣" I wanted to text you today but I said, hey, texting you would be boring. Why not just let me make this special, why not make this different. That's how i came up with the idea of coding this site, just for you 😊😊. Don't think I'm the one that designed this oo. It's AI oo 🤣. Though I know how to code, but I'm still a beginner 🤣. It'll take a while to master this thing real time. So, I just told it and boom, here we have it. I just wanted to make this year a special one for you.</p><br>
+    <p>I want to take a moment to think back, to remind you of how you've been a blessing to me since I met you. Since I've met you, I'm always happy. Though it's not everyday, coz everyday has its own challenges, but to be honest, you have a way of making me laugh, smile. You have been the only one that I've trusted so far, despite the fact that we haven't even seen each other face-to-face. I feel this strong connection between us. You have always been there for me.</p><br>
+    <p>You were there when I needed someone to talk to, a shoulder to cry on when I need to 🤣, I trust you so mcuh and thank you for not betraying me. I really do appreciate it.Thank you for being my rock, my defender, supporter, my back-bone. You have been there for me since day one. And this is actually the first friendship that I've had no quarrel with. I really cherish our friendship. When I was hailing you, it's not me trying to propose oo 🤣🤣. I was actually being real</p><br>
+    <img src="herphoto.jpg" alt="Her Photo" class="her-photo">
+    <p>This is literally like the only photo of you that I have 🤣</p><br>
+    <p>I just want you to know that I love you, not as lovers, but as friends, I cherish u so mcuh, you mean the world to me and I really mean it. I pray our friendship grows stronger. I just want you to know that I won't forget you. I love you a whole lot Aanu. I am actually feeling emotional doing this right now 😞😞</p>
+    <button onclick="window.location.href='celebration.html'">Next</button>
+</div>
+
+<script src="script.js"></script>
+<script>
+
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.textContent = "💖";
+        heart.style.position = "fixed";
+        heart.style.fontSize = Math.random() * 24 + 16 + "px";
+        heart.style.left = Math.random() * window.innerWidth + "px";
+        heart.style.top = window.innerHeight + "px";
+        heart.style.opacity = Math.random();
+        document.body.appendChild(heart);
+
+        let top = window.innerHeight;
+        const floatUp = setInterval(() => {
+            top -= 2 + Math.random() * 3;
+            heart.style.top = top + "px";
+            if(top < -50) {
+                heart.remove();
+                clearInterval(floatUp);
+            }
+        }, 20)
+    }
+
+    setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
